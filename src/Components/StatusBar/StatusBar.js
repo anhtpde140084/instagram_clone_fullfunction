@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import './StatusBar.css'
 import Avatar from '@material-ui/core/Avatar'
 import statusimg from "../../images/pp1.png";
+import uploadimage from "../../images/statusadd.png";
 export default class StatusBar extends Component {
     constructor(props) {
         super(props);
@@ -54,7 +55,12 @@ export default class StatusBar extends Component {
         return (
             <div>
                 <div className="statusbar__container">
-
+                    <div className="fileupload">
+                        <label for="file-upload-status" >
+                            <img className="statusbar__upload" src={uploadimage} width="55px" height="55px" />
+                        </label>
+                        {/* <input id="file-upload-status" onChange={this.uploadStatus} type="file" /> */}
+                    </div>
                     {
                         this.state.statusList.map((item, index) => (
                             <div className="status">
